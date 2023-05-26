@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/.src/readability-cli
+./readable.ts -q "$1"
+cd - > /dev/null

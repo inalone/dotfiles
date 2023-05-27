@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Xeyes
+GenericName=Eyes
+TryExec=xeyes
+Exec=xeyes
+Terminal=false
+Categories=System

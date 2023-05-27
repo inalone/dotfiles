@@ -27,4 +27,7 @@ importWireGuardConnection() {
 }
 
 alias ls='ls --color=auto'
+alias audio='ranger ~/Audio'
+alias video='ranger ~/Video'
+
 PS1="\[\e[38;5;66m\]\$(parse_git_branch)\[\e[38;5;142m\][\w]\[\e[00m\]$ "

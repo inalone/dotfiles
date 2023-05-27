@@ -167,8 +167,10 @@ bindsym XF86AudioPrev exec playerctl previous
 
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable, sticky enable
 for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
+for_window [title="xeyes"] floating enable, sticky enable
 
 exec autotiling-rs
+exec gammastep
 
 bar {
     position top

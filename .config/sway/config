@@ -170,7 +170,7 @@ for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky
 for_window [title="xeyes"] floating enable, sticky enable
 
 exec autotiling-rs
-exec gammastep
+exec wlsunset -l 53.8 -L 1.15
 
 bar {
     position top

@@ -27,6 +27,7 @@ importWireGuardConnection() {
 }
 
 alias ls='ls --color=auto'
+alias markdownPreview='ls *.md | entr -c glow'
 alias audio='ranger ~/Audio'
 alias video='ranger ~/Video'
 

@@ -165,6 +165,11 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+assign [app_id="firefox"] workspace number 2
+assign [title="Spotify"] workspace number 3
+assign [app_id="org.qbittorrent.qBittorrent"] workspace number 10
+assign [app_id="org.nicotine_plus.Nicotine"] workspace number 10
+
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable, sticky enable
 for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
 for_window [title="xeyes"] floating enable, sticky enable

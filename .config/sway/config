@@ -167,6 +167,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 assign [app_id="firefox"] workspace number 2
 assign [title="Spotify"] workspace number 3
+assign [class="Pidgin"] workspace number 5
 assign [app_id="org.qbittorrent.qBittorrent"] workspace number 10
 assign [app_id="org.nicotine_plus.Nicotine"] workspace number 10
 

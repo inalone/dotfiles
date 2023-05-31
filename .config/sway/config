@@ -176,6 +176,7 @@ for_window [title="xeyes"] floating enable, sticky enable
 
 exec autotiling-rs
 exec wlsunset -l 53.8 -L 1.15
+exec gnome-keyring-daemon --start --components=secrets
 
 bar {
     position top

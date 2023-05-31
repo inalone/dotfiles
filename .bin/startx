@@ -1,12 +1,9 @@
 #!/bin/bash
 
-eval $(ssh-agent)
-ssh-add -q ~/.ssh/id_ed25519
-
+export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
 export MOZ_ENABLE_WAYLAND=1
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 export QT_QPA_PLATFORM=wayland
 export XDG_CURRENT_DESKTOP=sway
 
 sway
-
-eval $(ssh-agent -k)

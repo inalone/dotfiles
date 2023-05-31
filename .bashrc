@@ -8,6 +8,17 @@ if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 	~/.bin/startx
 fi
 
+getAlbum() {
+	ALBUM_FILE="/home/user/Documents/1001-list.txt"
+	ALBUM=$(shuf -n 1 "$ALBUM_FILE")
+	sed -i "/$ALBUM/d" "$ALBUM_FILE"
+
+	echo "The album is $ALBUM"
+
+	git add "$ALBUM_FILE" > /dev/null
+	git commit --amend --no-edit > /dev/null
+}
+
 parse_git_branch() {
 	BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/')
 

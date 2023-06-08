@@ -37,8 +37,12 @@ importWireGuardConnection() {
 	nmcli connection modify "$CONNECTION_NAME" autoconnect no
 }
 
+alias copyAlbumTemplate='echo "Random 1001 Albums til I finish them all #" | wl-copy'
+
 alias ls='ls --color=auto'
 alias markdownPreview='ls *.md | entr -c glow'
+alias mpvWebcam='mpv  --profile=low-latency --untimed av://v4l2:/dev/video0'
+
 alias audio='ranger ~/Audio'
 alias video='ranger ~/Video'
 

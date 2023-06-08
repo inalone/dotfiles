@@ -7,10 +7,17 @@ separator = ""
 
 [icons]
 icons = "awesome6"
+[icons.overrides]
+bat = "BAT:"
+bat_full = "BAT:"
+bat_charging = "BAT:"
+bat_discharging = "BAT:"
+net_wireless = "WIFI ON"
+net_vpn = "[VPN]"
 
 [[block]]
 block = "net"
-format = " $icon  "
+format = " $icon "
 interval = 5
 
 [[block]]
@@ -26,13 +33,14 @@ format = " {$active_port|}{ $volume|} "
 button = "left"
 cmd = "pavucontrol"
 [block.active_port_mappings]
-"analog-output-headphones" = "\uf025"
-"analog-output-speaker" = "\uf027"
+"analog-output-headphones" = "HEADPHONES:"
+"analog-output-speaker" = "SPEAKER:"
 
 [[block]]
 block = "battery"
-format = " $icon  $percentage "
-driver= "upower"
+format = " $icon $percentage "
+driver = "upower"
+good = 101
 
 [[block]]
 block = "time"

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Piracy
-GenericName=Yargh
-TryExec=start-piracy
-Exec=start-piracy
-Terminal=false
-Categories=System

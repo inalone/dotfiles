@@ -37,6 +37,24 @@ importWireGuardConnection() {
 	nmcli connection modify "$CONNECTION_NAME" autoconnect no
 }
 
+updatei3Status() {
+	cd ~/.src/i3status-rust
+	cargo install --path . --locked
+	./install.sh
+	cd -
+}
+
+updateNeovim() {
+	cd ~/.src/neovim
+	git checkout stable
+	git pull
+	make CMAKE_BUILD_TYPE=RelWithDebInfo
+	cd build 
+	cpack -G DEB 
+	sudo dpkg -i nvim-linux64.deb
+	cd -
+}
+
 alias copyAlbumTemplate='echo "Random 1001 Albums til I finish them all #" | wl-copy'
 
 alias ls='ls --color=auto'

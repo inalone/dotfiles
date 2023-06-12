@@ -175,6 +175,8 @@ for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating ena
 for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky enable
 for_window [title="xeyes"] floating enable, sticky enable
 
+bindsym $mod+Shift+S sticky toggle
+
 exec autotiling-rs
 exec wlsunset -l 53.8 -L 1.15
 

@@ -188,4 +188,10 @@ bar {
 
 default_border pixel 2
 
+exec {
+  gnome-keyring-daemon --start --components=secrets
+  nextcloud
+  udiskie
+}
+
 include /etc/sway/config.d/*

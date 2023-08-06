@@ -1,3 +1,6 @@
 [submodule ".config/tmux/plugins/tpm"]
 	path = .config/tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule ".src/rofi-power-menu"]
+	path = .src/rofi-power-menu
+	url = git@github.com:inalone/rofi-power-menu.git

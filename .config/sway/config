@@ -165,6 +165,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+bindsym $mod+Shift+s sticky toggle
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky on
+
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+; exec $refreshvolume
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; exec $refreshvolume
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; exec $refreshvolume

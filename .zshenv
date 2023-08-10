@@ -1,3 +1,5 @@
+path+=("$HOME/.bin")
+export PATH
+
 export EDITOR="helix"
-export PATH="~/.bin:$PATH"
 export ZDOTDIR="$HOME/.config/zsh/"

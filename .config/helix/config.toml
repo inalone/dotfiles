@@ -1,0 +1,16 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true

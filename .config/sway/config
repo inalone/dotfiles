@@ -194,6 +194,7 @@ bar {
 default_border pixel 2
 
 exec {
+  autotiling-rs
   gnome-keyring-daemon --start --components=secrets
   nextcloud
   udiskie

@@ -8,8 +8,11 @@ insert = "bar"
 normal = "block"
 select = "block"
 
+[editor.soft-wrap]
+enable = true
+
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name"]
+left = ["mode", "spinner", "file-name"]
 
 [editor.lsp]
 display-inlay-hints = true

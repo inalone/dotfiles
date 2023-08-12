@@ -3,6 +3,7 @@ if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
 
+source "$ZDOTDIR/history.zsh"
 source "$ZDOTDIR/.zsh-aliases"
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZDOTDIR/plugins/zsh-completions/zsh-completions.plugin.zsh"

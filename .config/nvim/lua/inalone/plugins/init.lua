@@ -1,17 +1,12 @@
 return {
 	{
-		"ellisonleao/gruvbox.nvim",
+		"shaunsingh/nord.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("gruvbox").setup({
-				italic = {
-					strings = false,
-				},
-			})
 			vim.o.termguicolors = true
 			vim.o.background = "dark"
-			vim.cmd([[colorscheme gruvbox]])
+			vim.cmd([[colorscheme nord]])
 		end,
 	},
 	{
@@ -131,20 +126,15 @@ return {
 		end,
 	},
 	{
-		"romgrk/barbar.nvim",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		init = function()
-			vim.g.barbar_auto_setup = false
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function(_)
+			require("bufferline").setup({})
 		end,
-		opts = {
-			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-			-- animation = true,
-			-- insert_at_start = true,
-			-- …etc.
-		},
-		version = "^1.0.0", -- optional: only update when a new 1.x version is released
+	},
+	{
+		"tpope/vim-fugitive",
 	},
 	{
 		"windwp/nvim-autopairs",

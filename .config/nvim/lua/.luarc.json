@@ -1,0 +1,20 @@
+{
+    "workspace.library": [
+        "/home/user/.config/nvim",
+        "/home/user/.local/share/nvim/lazy/lazy.nvim",
+        "/home/user/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/user/.local/share/nvim/lazy/LuaSnip",
+        "/home/user/.local/share/nvim/lazy/cmp-path",
+        "/home/user/.local/share/nvim/lazy/cmp-buffer",
+        "/home/user/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/user/.local/share/nvim/lazy/nvim-cmp",
+        "/home/user/.local/share/nvim/lazy/gruvbox.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/lib/nvim",
+        "/home/user/.local/state/nvim/lazy/readme",
+        "/home/user/.local/share/nvim/lazy/cmp-path/after",
+        "/home/user/.local/share/nvim/lazy/cmp-buffer/after",
+        "/home/user/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "${3rd}/luassert/library"
+    ]
+}

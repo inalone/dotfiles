@@ -1,5 +1,5 @@
 path+=("$HOME/.bin")
 export PATH
 
-export EDITOR="helix"
+export EDITOR="nvim"
 export ZDOTDIR="$HOME/.config/zsh/"

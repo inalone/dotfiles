@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Sonixd
-Exec=sonixd --ozone-platform-hint=auto
-Terminal=false
-Type=Application
-Icon=sonixd
-Categories=Audio;AudioVideo

@@ -1,12 +1,11 @@
 return {
 	{
-		"shaunsingh/nord.nvim",
+		"navarasu/onedark.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			vim.o.termguicolors = true
-			vim.o.background = "dark"
-			vim.cmd([[colorscheme nord]])
+			require('onedark').load()
 		end,
 	},
 	{

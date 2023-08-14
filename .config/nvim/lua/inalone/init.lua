@@ -12,6 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.signcolumn = "number"
+
 vim.keymap.set("n", "<A-w>", ":bd<Cr>", {})
 
 require("lazy").setup("inalone.plugins")

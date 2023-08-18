@@ -11,5 +11,7 @@ source "$ZDOTDIR/plugins/git-prompt.zsh/git-prompt.zsh"
 
 PROMPT=$'$(gitprompt)[%F{6}%d%{\e[0m%}]%F{reset}$ '
 
+unsetopt HIST_VERIFY
+
 autoload -Uz compinit
 compinit

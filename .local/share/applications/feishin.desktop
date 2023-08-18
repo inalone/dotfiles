@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Feishin
-Exec=/opt/feishin-appimage/Feishin-0.3.0-linux-x86_64.AppImage --ozone-platform-hint=auto --no-sandbox %U
+Exec=/home/user/Downloads/Feishin-0.3.0-linux-x86_64.AppImage --ozone-platform-hint=auto --no-sandbox %U
 Terminal=false
 Type=Application
 Icon=feishin

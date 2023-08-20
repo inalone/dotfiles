@@ -19,6 +19,11 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
 vim.opt.spelllang = "en_gb"
 
+vim.wo.showbreak = "↪ "
+vim.wo.wrap = true
+vim.wo.linebreak = true
+vim.wo.list = false
+
 vim.keymap.set("n", "<A-w>", ":bd<Cr>", {})
 
 require("lazy").setup("inalone.plugins")
@@ -57,6 +62,7 @@ vim.keymap.set("n", "<leader>lr", builtin.lsp_references, { desc = "find referen
 -- bufferline
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+map("n", "<C-w>", "<Cmd>bd<CR>", opts)
 map("n", "<A-p>", "<Cmd>BufferLineTogglePin<CR>", opts)
 map("n", "<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>", opts)
 map("n", "<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>", opts)

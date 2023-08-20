@@ -20,6 +20,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
 			"hrsh7th/cmp-path",
 			"L3MON4D3/LuaSnip",
 			"neovim/nvim-lspconfig",
@@ -65,6 +66,7 @@ return {
 					{ name = "buffer" },
 					{ name = "luasnip" },
 					{ name = "nvim_lsp" },
+					{ name = 'nvim_lsp_signature_help' },
 					{ name = "path" },
 				}),
 			})
@@ -85,6 +87,7 @@ return {
 							globals = { "vim" },
 						},
 						workspace = {
+							checkThirdParty = false;
 							library = vim.api.nvim_get_runtime_file("", true),
 						},
 						telemetry = {

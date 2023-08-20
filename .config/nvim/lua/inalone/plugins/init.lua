@@ -11,14 +11,7 @@ return {
 	{
 		"numToStr/Comment.nvim",
 		config = function()
-			require("Comment").setup({
-				toggler = {
-					line = "co",
-				},
-				opleader = {
-					block = "co",
-				},
-			})
+			require("Comment").setup()
 		end,
 	},
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },

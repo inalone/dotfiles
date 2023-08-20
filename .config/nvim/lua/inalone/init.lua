@@ -17,10 +17,18 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.signcolumn = "number"
+vim.opt.spelllang = "en_gb"
 
 vim.keymap.set("n", "<A-w>", ":bd<Cr>", {})
 
 require("lazy").setup("inalone.plugins")
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = "markdown,org,txt,tex",
+    callback = function()
+	    vim.opt.spell = true;
+    end,
+})
 
 -- Lsp mappings
 vim.api.nvim_create_autocmd("LspAttach", {

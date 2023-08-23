@@ -1,9 +1,10 @@
 [Desktop Entry]
-Name=Feishin
-Exec=/home/user/Downloads/Feishin-0.3.0-linux-x86_64.AppImage --ozone-platform-hint=auto --no-sandbox %U
-Terminal=false
+Version=1.0
 Type=Application
+Name=Feishin
+Comment=A modern self-hosted music player
+Exec=feishin --ozone-platform-hint=auto --enable-features=WaylandWindowDecorations %u
 Icon=feishin
-StartupWMClass=Feishin
-X-AppImage-Version=0.2.0
-Categories=Development;
+Terminal=false
+StartupNotify=false
+Categories=AudioVideo;Audio;

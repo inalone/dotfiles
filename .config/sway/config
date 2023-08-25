@@ -15,8 +15,7 @@ set $term foot
 set $refreshvolume pkill -SIGRTMIN+10 i3blocks
 set $menu rofi -show drun
 set $calcmenu rofi -show calc -modi calc -no-show-match -no-sort -config /usr/share/rofi/themes/glue_pro_blue.rasi
-set $powermenu rofi -show powermenu -modi "powermenu:~/.bin/rofi-power-menu --no-symbols" 
-set $vpnmenu ~/.src/rofi-vpn/rofi-vpn.sh
+set $powermenu rofi -show powermenu -modi "powermenu:~/.local/bin/rofi-power-menu --no-symbols" 
 
 ### Output configuration
 output * bg #000000 solid_color
@@ -42,7 +41,6 @@ input "type:touchpad" {
     bindsym $mod+d exec $menu
     bindsym $mod+c exec $calcmenu
     bindsym $mod+p exec $powermenu
-    bindsym $mod+v exec $vpnmenu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -170,7 +168,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bindsym $mod+Shift+s sticky toggle
-for_window [app_id="Firefox" title="Picture-in-Picture"] floating enable, sticky on
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky on
 
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+; exec $refreshvolume
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; exec $refreshvolume
@@ -198,13 +196,9 @@ bar {
 default_border pixel 2
 
 exec {
-  dbus-update-activation-environment --all
-
-  pipewire
-  pipewire-pulse
-  wireplumber
-
   autotiling-rs
   nextcloud
   udiskie
 }
+
+include /etc/sway/config.d/*

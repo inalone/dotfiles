@@ -18,7 +18,7 @@ set $calcmenu rofi -show calc -modi calc -no-show-match -no-sort -config /usr/sh
 set $powermenu rofi -show powermenu -modi "powermenu:~/.local/bin/rofi-power-menu --no-symbols" 
 
 ### Output configuration
-output * bg #000000 solid_color
+output * bg #282828 solid_color
 output eDP-1 scale 1.0
 
 ### Input configuration
@@ -181,19 +181,22 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Delete exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 
-bar {
-    position top
+client.focused #fe8019 #fe8019 #ebdbb2 #fe8019
 
+bar {
     status_command i3blocks
 
+    font Iosevka 10
+
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        statusline #ebdbb2
+        background #282828
+
+	focused_workspace #fe8019 #d65d0e #282828
     }
 }
 
-default_border pixel 2
+default_border pixel 1
 
 exec {
   dbus-update-activation-environment --all

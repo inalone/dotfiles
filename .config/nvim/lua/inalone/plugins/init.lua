@@ -1,11 +1,18 @@
 return {
 	{
-		"navarasu/onedark.nvim",
-		lazy = false,
+		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			vim.o.termguicolors = true
-			require('onedark').load()
+			require("gruvbox").setup({
+				italic = {
+					strings = false,
+					comments = false,
+					operators = false,
+					folds = false,
+				}
+			})
+			vim.o.background = "dark"
+			vim.cmd([[colorscheme gruvbox]])
 		end,
 	},
 	{

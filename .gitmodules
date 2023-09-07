@@ -16,3 +16,6 @@
 [submodule ".src/Betterfox"]
 	path = .src/Betterfox
 	url = https://github.com/yokoffing/Betterfox.git
+[submodule ".src/void-packages"]
+	path = .src/void-packages
+	url = git@github.com:inalone/void-packages.git

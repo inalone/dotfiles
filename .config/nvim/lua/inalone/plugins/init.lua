@@ -81,6 +81,7 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lsp = require("lspconfig")
 
+			lsp.bashls.setup({})
 			lsp.clangd.setup({})
 			lsp.cssls.setup({})
 			lsp.html.setup({})

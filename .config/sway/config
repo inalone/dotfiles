@@ -184,6 +184,8 @@ bindsym $mod+Delete exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 client.focused #fe8019 #fe8019 #ebdbb2 #fe8019
 
 bar {
+    position top
+
     status_command i3blocks
 
     font Iosevka 10

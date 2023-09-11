@@ -1,6 +1,5 @@
-# if logging in on tty, don't bother loading the prompt stuff - just load sway
-if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+if [ "$(tty)" = "/dev/tty1" ]; then
+	exec startx
 fi
 
 source "$ZDOTDIR/history.zsh"

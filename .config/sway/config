@@ -21,9 +21,15 @@ set $powermenu rofi -show powermenu -modi "powermenu:~/.local/bin/rofi-power-men
 output * bg #282828 solid_color
 output eDP-1 scale 1.0
 
+workspace 10 output DP-4
+
 ### Input configuration
 
 input "type:touchpad" {
+  tap enabled
+}
+
+input "type:pointer" {
   tap enabled
 }
 

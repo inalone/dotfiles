@@ -1,0 +1,7 @@
+[project]
+name = "inabar"
+description = "A status bar to integrate with dwlb."
+version = "0.0.1"
+dependencies = [
+	"pulsectl-asyncio >= 1.1.1",
+]

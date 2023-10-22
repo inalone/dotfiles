@@ -1,0 +1,19 @@
+#!/bin/sh
+
+trap "trap - TERM && kill -- -$$" INT TERM EXIT
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+  eval $(dbus-launch --sh-syntax --exit-with-session)
+fi
+
+pipewire > /dev/null 2>&1 &
+
+(
+     while [ ! -e $XDG_RUNTIME_DIR/pipewire-0 ]; do sleep 0.1; done
+     pipewire-pulse > /dev/null 2>&1 &
+     wireplumber > /dev/null 2>&1 &
+) &
+
+dbus-update-activation-environment --all
+
+dwl -s "dwlb | (sleep 0.5 && ~/.local/bin/inabar)"

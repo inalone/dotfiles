@@ -1,10 +1,11 @@
 from contextlib import suppress
-from pulsectl import Pulse
+from pulsectl import Pulse, PulseDisconnected, PulseError 
 
 import asyncio
 import pulsectl_asyncio
 import signal
 import subprocess
+import sys
 import time
 
 BATTERY_FILE_PATH="/sys/class/power_supply/BAT1"
@@ -19,7 +20,9 @@ class Status:
 
     def print_status(self):
         status = f"Volume: {self.volume} | Battery: {self.battery_percentage}%{self.battery_charging_indicator} | {self.time}"
-        subprocess.run(["dwlb", "-status", "all", status])
+        #subprocess.run(["dwlb", "-status", "all", status])
+        sys.__stdout__.write(f"{status}\n")
+        sys.__stdout__.flush()
         #print(status)
 
     async def set_initial_values(self):
@@ -70,18 +73,23 @@ class Status:
             await self.set_battery_and_time()
             self.print_status()
 
+# todo: cleanup
 async def main():
-    async with pulsectl_asyncio.PulseAsync('peak-listener') as pulse:
-        status = Status(pulse)
+    while True:
+        try:
+            async with pulsectl_asyncio.PulseAsync('peak-listener') as pulse:
+                status = Status(pulse)
 
-        await status.set_initial_values()
-        status.print_status()
+                await status.set_initial_values()
+                status.print_status()
 
-        pulse_listen_task = asyncio.create_task(status.pulse_listen())
-        clock_tick_task = asyncio.create_task(status.clock_tick())
+                pulse_listen_task = asyncio.create_task(status.pulse_listen())
+                clock_tick_task = asyncio.create_task(status.clock_tick())
 
-        with suppress(asyncio.CancelledError):
-            await asyncio.gather(pulse_listen_task, clock_tick_task)
+                with suppress(asyncio.CancelledError):
+                    await asyncio.gather(pulse_listen_task, clock_tick_task)
+        except (PulseError, PulseDisconnected):
+            await asyncio.sleep(0.1)
 
 if __name__ == '__main__':
     loop = asyncio.new_event_loop()

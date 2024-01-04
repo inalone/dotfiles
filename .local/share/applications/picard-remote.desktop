@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=MusicBrainz Picard (remote)
+Comment=Tag your music with the next generation MusicBrainz tagger
+Exec=waypipe ssh user@server picard -platform wayland %F
+Terminal=false
+Type=Application
+StartupNotify=true
+StartupWMClass=Picard
+Icon=org.musicbrainz.Picard
+Categories=AudioVideo;Audio;AudioVideoEditing;

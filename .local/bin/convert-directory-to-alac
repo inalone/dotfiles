@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+for i in *.flac ; do 
+	relativepath="$(realpath --relative-to=/mnt/Data/Audio/Music .)"
+	backuppath="/mnt/Data/Audio/FLACUp/$relativepath"
+
+	mkdir -p "$backuppath"
+	ffmpeg -i "$i" -c:v copy -c:a alac "$(basename "${i/.flac}")".m4a
+	cp "$i" "$backuppath/$i"
+	rm "$i"
+done

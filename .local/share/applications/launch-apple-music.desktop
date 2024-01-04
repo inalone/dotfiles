@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Launch Apple Music
+#Exec=waydroid app launch com.apple.android.music
+Exec=/home/user/.local/bin/apple-music
+Icon=/home/user/.local/share/waydroid/data/icons/com.apple.android.music.png
+Categories=X-WayDroid-App;
+X-Purism-FormFactor=Workstation;Mobile;
+Actions=app_settings;

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+waydroid app launch com.apple.android.music &
+sleep 20 && waydroid app launch com.arn.scrobble

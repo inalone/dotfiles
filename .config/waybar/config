@@ -127,7 +127,7 @@
         "bat": "BAT2"
     },
     "network": {
-        "interface": "wlp166s0",
+        "interface": "wlan0",
         "format-wifi": "",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "format-disconnected": "",

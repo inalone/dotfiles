@@ -5,11 +5,11 @@ set $up k
 set $right l
 set $term foot
 set $menu rofi -show drun
-set $calcmenu rofi -show calc -modi calc -no-show-match -no-sort
+set $calcmenu   rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
 set $powermenu rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu
 
 # input/output
-output * bg ~/Downloads/wallpaper.jpg fill
+#output * bg ~/Downloads/wallpaper.jpg fill
 output eDP-1 scale 1.0
 
 input "type:touchpad" {
@@ -121,7 +121,7 @@ bar {
 }
 
 bindsym $mod+Shift+s sticky toggle
-for_window [app_id="Firefox" title="Picture-in-Picture"] floating enable, sticky on
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable, sticky on
 
 for_window [app_id="virt-manager" title="win10 on QEMU/KVM"] floating enable
 
@@ -151,8 +151,5 @@ bindsym $mod+Delete exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 
 exec {
     dbus-update-activation-environment --all
-    pipewire
-
-    autotiling-rs
-    gammastep -l 53.8:1.5
+    /usr/libexec/pipewire-launcher
 }

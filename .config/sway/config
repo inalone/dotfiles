@@ -3,9 +3,9 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
+set $term alacritty
 set $menu rofi -show drun
-set $calcmenu   rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
+set $calcmenu  rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
 set $powermenu rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu
 
 # input/output
@@ -151,5 +151,6 @@ bindsym $mod+Delete exec grim -g "$(slurp -d)" - | wl-copy -t image/png
 
 exec {
     dbus-update-activation-environment --all
-    /usr/libexec/pipewire-launcher
 }
+
+include /etc/sway/config.d/*

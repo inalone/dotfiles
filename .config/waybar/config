@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "network", "pulseaudio", "battery"],
+    "modules-right": ["tray", "network", "wireplumber", "battery"],
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
@@ -127,7 +127,7 @@
         "bat": "BAT2"
     },
     "network": {
-        "interface": "wlan0",
+        "interface": "wlp166s0",
         "format-wifi": "",
         "tooltip-format": "{essid} ({signalStrength}%)",
         "format-disconnected": "",
